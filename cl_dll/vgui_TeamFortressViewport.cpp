@@ -57,6 +57,8 @@
 #include "shake.h"
 #include "screenfade.h"
 
+#include "discord_integration.h"
+
 extern int g_iVisibleMouse;
 class CCommandMenu;
 int g_iPlayerClass;
@@ -2419,6 +2421,8 @@ int TeamFortressViewport::MsgFunc_ScoreInfo( const char *pszName, int iSize, voi
 			 g_PlayerExtraInfo[cl].teamnumber = 0;
 
 		UpdateOnPlayerInfo();
+		// DISCORD RPC
+		discord_integration::on_player_count_update();
 	}
 
 	return 1;

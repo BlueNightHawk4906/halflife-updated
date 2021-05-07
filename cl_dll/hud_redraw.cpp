@@ -21,6 +21,9 @@
 
 #include "vgui_TeamFortressViewport.h"
 
+// DISCORD RPC
+#include "discord_integration.h"
+
 #define MAX_LOGO_FRAMES 56
 
 int grgLogoFrame[MAX_LOGO_FRAMES] = 

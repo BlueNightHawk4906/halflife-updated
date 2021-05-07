@@ -24,6 +24,9 @@ extern Vector v_origin;
 
 int g_iAlive = 1;
 
+// DISCORD RPC
+#include "discord_integration.h"
+
 /*
 ========================
 HUD_AddEntity
@@ -153,6 +156,12 @@ void DLLEXPORT HUD_ProcessPlayerState( struct entity_state_s *dst, const struct 
 	{
 		g_iPlayerClass = dst->playerclass;
 		g_iTeamNumber = dst->team;
+
+		// DISCORD RPC
+		if (src->iuser1 != 0)
+			discord_integration::set_spectating(true);
+		else if (g_iUser1 != 0)
+			discord_integration::set_spectating(false);
 
 		g_iUser1 = src->iuser1;
 		g_iUser2 = src->iuser2;

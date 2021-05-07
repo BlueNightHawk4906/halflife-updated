@@ -1,0 +1,2 @@
+E:\Steam\steamapps\common\Half-Life\!new_repos\halflife-updated\external\discord-rpc\vs2019\src\Debug\discord-rpc.pdb
+E:\Steam\steamapps\common\Half-Life\!new_repos\halflife-updated\external\discord-rpc\vs2019\src\discord-rpc.dir\Debug\discord-rpc.pdb

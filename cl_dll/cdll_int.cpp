@@ -42,6 +42,9 @@ cl_enginefunc_t gEngfuncs;
 CHud gHUD;
 TeamFortressViewport *gViewPort = NULL;
 
+// DISCORD RPC
+#include "discord_integration.h"
+#include <ctime>
 
 #include "particleman.h"
 CSysModule *g_hParticleManModule = NULL;
@@ -145,6 +148,9 @@ int DLLEXPORT Initialize( cl_enginefunc_t *pEnginefuncs, int iVersion )
 
 	memcpy(&gEngfuncs, pEnginefuncs, sizeof(cl_enginefunc_t));
 
+	// DISCORD RPC
+	discord_integration::initialize();
+
 	EV_HookEvents();
 	CL_LoadParticleMan();
 
@@ -170,6 +176,14 @@ int DLLEXPORT HUD_VidInit()
 
 	VGui_Startup();
 
+	if (gEngfuncs.GetMaxClients() > 1)
+	{
+		// DISCORD RPC
+		std::time_t curtime = std::time(0);
+		std::localtime(&curtime);
+		discord_integration::set_start_time(curtime);
+	}
+
 	return 1;
 }
 
@@ -189,6 +203,11 @@ void DLLEXPORT HUD_Init()
 	InitInput();
 	gHUD.Init();
 	Scheme_Init();
+
+	// DISCORD RPC
+	std::time_t curtime = std::time(0);
+	std::localtime(&curtime);
+	discord_integration::set_start_time(curtime);
 }
 
 
@@ -230,6 +249,9 @@ int DLLEXPORT HUD_UpdateClientData(client_data_t *pcldata, float flTime )
 
 	IN_Commands();
 
+	// DISCORD RPC
+	discord_integration::on_update_client_data();
+
 	return gHUD.UpdateClientData(pcldata, flTime );
 }
 
@@ -261,6 +283,9 @@ void DLLEXPORT HUD_Frame( double time )
 //	RecClHudFrame(time);
 
 	GetClientVoiceMgr()->Frame(time);
+
+	// DISCORD RPC
+	discord_integration::on_frame();
 }
 
 

@@ -1,0 +1,7 @@
+E:/Steam/steamapps/common/Half-Life/!new_repos/halflife-updated/external/discord-rpc/vs2019/CMakeFiles/INSTALL.dir
+E:/Steam/steamapps/common/Half-Life/!new_repos/halflife-updated/external/discord-rpc/vs2019/CMakeFiles/ALL_BUILD.dir
+E:/Steam/steamapps/common/Half-Life/!new_repos/halflife-updated/external/discord-rpc/vs2019/CMakeFiles/ZERO_CHECK.dir
+E:/Steam/steamapps/common/Half-Life/!new_repos/halflife-updated/external/discord-rpc/vs2019/src/CMakeFiles/discord-rpc.dir
+E:/Steam/steamapps/common/Half-Life/!new_repos/halflife-updated/external/discord-rpc/vs2019/src/CMakeFiles/INSTALL.dir
+E:/Steam/steamapps/common/Half-Life/!new_repos/halflife-updated/external/discord-rpc/vs2019/examples/send-presence/CMakeFiles/send-presence.dir
+E:/Steam/steamapps/common/Half-Life/!new_repos/halflife-updated/external/discord-rpc/vs2019/examples/send-presence/CMakeFiles/INSTALL.dir

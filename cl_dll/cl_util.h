@@ -176,3 +176,65 @@ inline void UnpackRGB(int &r, int &g, int &b, unsigned long ulRGB)\
 }
 
 HSPRITE LoadSprite(const char *pszName);
+
+// DISCORD RPC
+#include "net_api.h"
+#include <string>
+
+static size_t get_map_name(char* dest, size_t count)
+{
+	auto map_path = gEngfuncs.pfnGetLevelName();
+
+	const char* slash = strrchr(map_path, '/');
+	if (!slash)
+		slash = map_path - 1;
+
+	const char* dot = strrchr(map_path, '.');
+	if (!dot)
+		dot = map_path + strlen(map_path);
+
+	size_t bytes_to_copy = V_min(count - 1, static_cast<size_t>(dot - slash - 1));
+
+	strncpy(dest, slash + 1, bytes_to_copy);
+	dest[bytes_to_copy] = '\0';
+
+	return bytes_to_copy;
+}
+
+static char* get_server_address()
+{
+	net_status_t netstatus{};
+	gEngfuncs.pNetAPI->Status(&netstatus);
+	return gEngfuncs.pNetAPI->AdrToString(&netstatus.remote_address);
+}
+
+static void sanitize_address(std::string& address)
+{
+	for (size_t i = 0; i < address.size(); ++i) {
+		char c = address[i];
+		if ((c >= '0' && c <= '9') || c == '.' || c == ':')
+			continue;
+
+		// Invalid character.
+		address = address.substr(0, i);
+		break;
+	}
+}
+
+static size_t get_player_count()
+{
+	size_t player_count = 0;
+
+	for (int i = 0; i < MAX_PLAYERS; ++i) {
+		// Make sure the information is up to date.
+		gEngfuncs.pfnGetPlayerInfo(i + 1, &g_PlayerInfoList[i + 1]);
+
+		// This player slot is empty.
+		if (g_PlayerInfoList[i + 1].name == nullptr)
+			continue;
+
+		++player_count;
+	}
+
+	return player_count;
+}

@@ -10,20 +10,40 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hl_cdll", "hl_cdll.vcxproj"
 		{69DDADC0-97F4-419E-86EB-C91781A0D2E0} = {69DDADC0-97F4-419E-86EB-C91781A0D2E0}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "discord-rpc", "..\..\external\discord-rpc\vs2019\src\discord-rpc.vcxproj", "{4342DAEA-6F3F-3D40-82E2-0DE20DC1A787}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		MinSizeRel|Win32 = MinSizeRel|Win32
 		Release|Win32 = Release|Win32
+		RelWithDebInfo|Win32 = RelWithDebInfo|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{69DDADC0-97F4-419E-86EB-C91781A0D2E0}.Debug|Win32.ActiveCfg = Debug|Win32
 		{69DDADC0-97F4-419E-86EB-C91781A0D2E0}.Debug|Win32.Build.0 = Debug|Win32
+		{69DDADC0-97F4-419E-86EB-C91781A0D2E0}.MinSizeRel|Win32.ActiveCfg = Release|Win32
+		{69DDADC0-97F4-419E-86EB-C91781A0D2E0}.MinSizeRel|Win32.Build.0 = Release|Win32
 		{69DDADC0-97F4-419E-86EB-C91781A0D2E0}.Release|Win32.ActiveCfg = Release|Win32
 		{69DDADC0-97F4-419E-86EB-C91781A0D2E0}.Release|Win32.Build.0 = Release|Win32
+		{69DDADC0-97F4-419E-86EB-C91781A0D2E0}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
+		{69DDADC0-97F4-419E-86EB-C91781A0D2E0}.RelWithDebInfo|Win32.Build.0 = Release|Win32
 		{DC1DD765-CFEB-47DA-A2EA-9F1E20A24272}.Debug|Win32.ActiveCfg = Debug|Win32
 		{DC1DD765-CFEB-47DA-A2EA-9F1E20A24272}.Debug|Win32.Build.0 = Debug|Win32
+		{DC1DD765-CFEB-47DA-A2EA-9F1E20A24272}.MinSizeRel|Win32.ActiveCfg = Release|Win32
+		{DC1DD765-CFEB-47DA-A2EA-9F1E20A24272}.MinSizeRel|Win32.Build.0 = Release|Win32
 		{DC1DD765-CFEB-47DA-A2EA-9F1E20A24272}.Release|Win32.ActiveCfg = Release|Win32
 		{DC1DD765-CFEB-47DA-A2EA-9F1E20A24272}.Release|Win32.Build.0 = Release|Win32
+		{DC1DD765-CFEB-47DA-A2EA-9F1E20A24272}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
+		{DC1DD765-CFEB-47DA-A2EA-9F1E20A24272}.RelWithDebInfo|Win32.Build.0 = Release|Win32
+		{4342DAEA-6F3F-3D40-82E2-0DE20DC1A787}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4342DAEA-6F3F-3D40-82E2-0DE20DC1A787}.Debug|Win32.Build.0 = Debug|Win32
+		{4342DAEA-6F3F-3D40-82E2-0DE20DC1A787}.MinSizeRel|Win32.ActiveCfg = MinSizeRel|Win32
+		{4342DAEA-6F3F-3D40-82E2-0DE20DC1A787}.MinSizeRel|Win32.Build.0 = MinSizeRel|Win32
+		{4342DAEA-6F3F-3D40-82E2-0DE20DC1A787}.Release|Win32.ActiveCfg = Release|Win32
+		{4342DAEA-6F3F-3D40-82E2-0DE20DC1A787}.Release|Win32.Build.0 = Release|Win32
+		{4342DAEA-6F3F-3D40-82E2-0DE20DC1A787}.RelWithDebInfo|Win32.ActiveCfg = RelWithDebInfo|Win32
+		{4342DAEA-6F3F-3D40-82E2-0DE20DC1A787}.RelWithDebInfo|Win32.Build.0 = RelWithDebInfo|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

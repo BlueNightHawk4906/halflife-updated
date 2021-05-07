@@ -1,0 +1,10 @@
+^E:\STEAM\STEAMAPPS\COMMON\HALF-LIFE\!NEW_REPOS\HALFLIFE-UPDATED\EXTERNAL\DISCORD-RPC\SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Steam/steamapps/common/Half-Life/!new_repos/halflife-updated/external/discord-rpc -BE:/Steam/steamapps/common/Half-Life/!new_repos/halflife-updated/external/discord-rpc/vs2019 --check-stamp-file E:/Steam/steamapps/common/Half-Life/!new_repos/halflife-updated/external/discord-rpc/vs2019/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

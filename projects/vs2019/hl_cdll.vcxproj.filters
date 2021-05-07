@@ -58,6 +58,12 @@
     <Filter Include="Header Files\engine">
       <UniqueIdentifier>{ebcb0f66-49b6-4e55-9a97-f6720cade9ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\discord">
+      <UniqueIdentifier>{7f9dcbb2-82aa-4762-841e-96091b1064a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\discord">
+      <UniqueIdentifier>{cf47ba34-be1d-4c26-a3d3-7d0b896c1bda}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\dlls\crossbow.cpp">
@@ -305,6 +311,9 @@
     </ClCompile>
     <ClCompile Include="..\..\dlls\weapons_shared.cpp">
       <Filter>Source Files\_hl\dlls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cl_dll\discord_integration.cpp">
+      <Filter>Source Files\discord</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -568,6 +577,12 @@
     </ClInclude>
     <ClInclude Include="..\..\engine\progs.h">
       <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cl_dll\discord_integration.h">
+      <Filter>Header Files\discord</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\discord-rpc\include\discord_rpc.h">
+      <Filter>Header Files\discord</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
