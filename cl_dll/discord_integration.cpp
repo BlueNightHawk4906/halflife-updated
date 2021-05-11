@@ -249,7 +249,10 @@ namespace discord_integration
 					{
 						if (maps_with_thumbnails.find(map_name) != maps_with_thumbnails.cend())
 							presence.largeImageKey = map_name;
-
+						else if (!gameinf.thumbname.empty())
+						{
+							presence.largeImageKey = gameinf.thumbname.c_str();
+						}
 						if (gameinf.chaptertitles)
 							presence.largeImageText = gameinf.chpname.c_str();
 						else
